@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import s from './style.module.css'
+import s from './style.module.css';
 import { addToBasket } from '../../store/slices/basketSlice';
 import { fetchSingleProduct } from '../../store/slices/singleProductSlice';
 import MobilAccordion from '../../components/MobilAccordion';
@@ -9,80 +9,85 @@ import NotFoundPage from '../NotFoundPage';
 import { toast } from 'react-toastify';
 
 const SingleProductPage = () => {
-    const { id } = useParams()
-    const dispatch = useDispatch()
+  const { id } = useParams();
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchSingleProduct(id))
-    },[dispatch, id])
-    
-    const { product } = useSelector(state => state)
+  useEffect(() => {
+    dispatch(fetchSingleProduct(id));
+  }, [dispatch, id]);
 
-    const {title, description, discont_price, price, image} = product?.item ? product?.item : {}
+  const { product } = useSelector(state => state);
 
-    const disc_percent = (100 - (discont_price * 100 / price)).toFixed(1)
+  const { title, description, discont_price, price, image } = product?.item
+    ? product?.item
+    : {};
 
-    useEffect(() => {
-        document.title = `Product: ${title}`
-    },[title])
+  const disc_percent = (100 - (discont_price * 100) / price).toFixed(1);
 
-    const onClickAdd = () => {
-        dispatch(addToBasket(product.item.id))
-        toast.info('The product has been added to your cart.', {
-            autoClose: 2000,
-        })
-    }
+  useEffect(() => {
+    document.title = `Product: ${title}`;
+  }, [title]);
 
-    return (
-        <>
-        {
-            product?.item ? 
-            <div className={s.product_page}>
-                <h1 className={s.product_title}>{title}</h1>
-                <div className={s.product_card}>
-                    <div className={s.image_container}>
-                        <img className={s.img} src={`http://localhost:3333${image}`} alt={title} />
-                    </div>
-                    <div className={s.product_info}>
-                        <div className={s.actions}>
-                            <div className={discont_price ? s.prices_blok :''} >
-                            {
-                                discont_price ?
-                                <>
-                                    <p className={s.disc_price}>{discont_price}
-                                        <span className={s.symbol}>$</span> 
-                                    </p>
-                                    <p className={s.price}>{price}$ </p>
-                                    <p className={s.percent}> -{disc_percent}%</p>
-                                </>
-                                :  <p className={s.no_disc_price}>
-                                        {price}<span className={s.symbol}>$</span> 
-                                    </p>
-                            }
-                            </div> 
-                            <button 
-                                onClick={ onClickAdd } 
-                                className={s.add_btn}>
-                                    To cart
-                            </button>
-                        </div>
-                        <div className={s.product_descr}>
-                            <p className={s.subtitle}>Description</p>
-                             <p className={s.text}>{description}</p>
-                        </div>
-                        <div className={s.mob_descr}>
-                            <MobilAccordion title={'Description'}>
-                                {description}
-                            </MobilAccordion>
-                        </div>
-                    </div>
+  const onClickAdd = () => {
+    dispatch(addToBasket(product.item.id));
+    toast.info('The product has been added to your cart.', {
+      autoClose: 2000,
+    });
+  };
+
+  return (
+    <>
+      {product?.item ? (
+        <div className={s.product_page}>
+          <h1 className={s.product_title}>{title}</h1>
+          <div className={s.product_card}>
+            <div className={s.image_container}>
+              <img
+                className={s.img}
+                src={`https://garden-store-backend.onrender.com${image}`}
+                alt={title}
+              />
+            </div>
+            <div className={s.product_info}>
+              <div className={s.actions}>
+                <div className={discont_price ? s.prices_blok : ''}>
+                  {discont_price ? (
+                    <>
+                      <p className={s.disc_price}>
+                        {discont_price}
+                        <span className={s.symbol}>$</span>
+                      </p>
+                      <p className={s.price}>{price}$ </p>
+                      <p className={s.percent}> -{disc_percent}%</p>
+                    </>
+                  ) : (
+                    <p className={s.no_disc_price}>
+                      {price}
+                      <span className={s.symbol}>$</span>
+                    </p>
+                  )}
                 </div>
-            </div> 
-            : <NotFoundPage/>
-        }
-        </>
-
-    );
+                <button onClick={onClickAdd} className={s.add_btn}>
+                  To cart
+                </button>
+              </div>
+              <div className={s.product_descr}>
+                <p className={s.subtitle}>Description</p>
+                <p className={s.text}>{description}</p>
+              </div>
+              <div className={s.mob_descr}>
+                <MobilAccordion title={'Description'}>
+                  {description}
+                </MobilAccordion>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <NotFoundPage />
+      )}
+    </>
+  );
 };
 
 export default SingleProductPage;
