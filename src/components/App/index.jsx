@@ -27,7 +27,7 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/garden-store" element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route
           path="/categories/:categoryTitle/:categoryID"
