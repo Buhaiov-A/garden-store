@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 const ProductItem = ({ id, title, price, discont_price, image }) => {
   const dispatch = useDispatch();
-  const link = `/product/${id}`;
+  const link = `/products/${id}`;
   const disc_percent = (100 - (discont_price * 100) / price).toFixed(1);
 
   const onClickAdd = e => {

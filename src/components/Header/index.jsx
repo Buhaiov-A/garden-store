@@ -30,8 +30,8 @@ const Header = () => {
                 </Link>
                 <nav className={s.nav} >
                     <NavLink className={changeClass} onClick={menuHandler} to='/'>Main Page</NavLink>
-                    <NavLink className={changeClass} onClick={menuHandler} to='/products/all'>Products</NavLink>
-                    <NavLink className={changeClass} onClick={menuHandler} to='/sales/sales_all'>Sales</NavLink> 
+                    <NavLink className={changeClass} onClick={menuHandler} to='/products'>Products</NavLink>
+                    <NavLink className={changeClass} onClick={menuHandler} to='/sales'>Sales</NavLink> 
                 </nav>
 
                 <div className={s.icons}>
