@@ -1,8 +1,8 @@
-import React from "react";
-import s from "./style.module.css";
-import { Link } from "react-router-dom";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import React from 'react';
+import s from './style.module.css';
+import { Link } from 'react-router-dom';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Footer = () => {
   return (
@@ -17,13 +17,13 @@ const Footer = () => {
             <div className={s.soc_networks}>
               <Link
                 className={s.icon}
-                to={"https://www.instagram.com/telran.de/"}
+                to={'https://www.instagram.com/telran.de/'}
                 target="_blank"
               >
-                <InstagramIcon sx={{ fontSize: 50, color: "black" }} />
+                <InstagramIcon sx={{ fontSize: 50, color: 'black' }} />
               </Link>
-              <Link className={s.icon} to={"/"} target="_blank">
-                <WhatsAppIcon sx={{ fontSize: 50, color: "black" }} />
+              <Link className={s.icon} to={'/'} target="_blank">
+                <WhatsAppIcon sx={{ fontSize: 50, color: 'black' }} />
               </Link>
             </div>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
             </Link>
             <div className={s.schedule}>
               <p>
-                {" "}
+                {' '}
                 Working Hours: <span>24 hours a day</span>
               </p>
             </div>
@@ -48,9 +48,10 @@ const Footer = () => {
         <div className={s.map}>
           <iframe
             title="tel_ran"
-            frameBorder="0"
             width="100%"
             height="525px"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             src="https://maps.google.com/maps?width=500&amp;height=400&amp;hl=en&amp;q=Linkstra%C3%9Fe%202,%208%20OG,%2010785%20Berlin+(tel_ran)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           />
         </div>

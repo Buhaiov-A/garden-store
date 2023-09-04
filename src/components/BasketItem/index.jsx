@@ -11,7 +11,7 @@ const BasketItem = ({ id, title, price, discont_price, image, count }) => {
     <div className={s.product_item}>
       <img
         className={s.product_img}
-        src={`https://garden-store-backend.onrender.com${image}`}
+        src={`https://garden-store-backend.onrender.com/${image}`}
         alt={title}
       />
       <div className={s.grid_item}>

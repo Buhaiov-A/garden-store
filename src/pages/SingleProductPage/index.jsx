@@ -44,7 +44,7 @@ const SingleProductPage = () => {
             <div className={s.image_container}>
               <img
                 className={s.img}
-                src={`https://garden-store-backend.onrender.com${image}`}
+                src={`https://garden-store-backend.onrender.com/${image}`}
                 alt={title}
               />
             </div>

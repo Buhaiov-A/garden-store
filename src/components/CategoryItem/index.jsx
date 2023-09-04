@@ -6,7 +6,7 @@ const CategoryItem = ({ id, title, image }) => {
   return (
     <Link className={s.item} to={`/categories/${title}/${id}`}>
       <img
-        src={`https://garden-store-backend.onrender.com${image}`}
+        src={`https://garden-store-backend.onrender.com/${image}`}
         alt={title}
       />
       <p>{title}</p>
