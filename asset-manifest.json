@@ -1,20 +1,19 @@
 {
   "files": {
     "main.css": "/garden-store/static/css/main.34579cdb.css",
-    "main.js": "/garden-store/static/js/main.24c01b7d.js",
+    "main.js": "/garden-store/static/js/main.484f04cf.js",
     "static/media/img.png": "/garden-store/static/media/img.219152481630c1bc0f3f.png",
     "static/media/404-Page.jpg": "/garden-store/static/media/404-Page.b15db41e8ff13748852d.jpg",
     "static/media/gnome.png": "/garden-store/static/media/gnome.d7aeb6a7be57f95972d3.png",
     "static/media/logo.svg": "/garden-store/static/media/logo.26c5e2555d7712985c7720286efa26e5.svg",
-    "static/media/cart_empty.svg": "/garden-store/static/media/cart_empty.efdeacd450b9826f5f9e60c4bbc6a0cc.svg",
     "static/media/basket_icon.svg": "/garden-store/static/media/basket_icon.6320b6cf6aa98ff996bb1253f6f6bf78.svg",
     "index.html": "/garden-store/index.html",
     "static/media/cross.svg": "/garden-store/static/media/cross.c04b75fbc6b2a398782f3ca6525409c2.svg",
     "main.34579cdb.css.map": "/garden-store/static/css/main.34579cdb.css.map",
-    "main.24c01b7d.js.map": "/garden-store/static/js/main.24c01b7d.js.map"
+    "main.484f04cf.js.map": "/garden-store/static/js/main.484f04cf.js.map"
   },
   "entrypoints": [
     "static/css/main.34579cdb.css",
-    "static/js/main.24c01b7d.js"
+    "static/js/main.484f04cf.js"
   ]
 }
