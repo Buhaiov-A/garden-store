@@ -12,6 +12,7 @@
   height: 600px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 40px;
 }
 .poster_info {
@@ -36,7 +37,7 @@
 .img_container {
   display: flex;
   align-items: flex-end;
-  width: 50%;
+  width: 40%;
 }
 .img {
   min-width: 100%;
