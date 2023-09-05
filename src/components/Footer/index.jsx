@@ -47,13 +47,13 @@ const Footer = () => {
         </div>
         <div className={s.map}>
           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.4090427798687!2d13.372469777052384!3d52.50793613712219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8515353a68755%3A0xd0866511db4f838f!2sStarta%20Institute%20by%20Tel-Ran!5e0!3m2!1sru!2sde!4v1693897713060!5m2!1sru!2sde"
             title="tel_ran"
             width="100%"
             height="525px"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?width=500&amp;height=400&amp;hl=en&amp;q=Linkstra%C3%9Fe%202,%208%20OG,%2010785%20Berlin+(tel_ran)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          />
+          ></iframe>
         </div>
       </div>
     </footer>
