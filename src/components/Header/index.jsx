@@ -39,7 +39,7 @@ const Header = () => {
           <NavLink
             className={changeClass}
             onClick={menuHandler}
-            to="/sales/:AllSales"
+            to="/sales/AllSales"
           >
             Sales
           </NavLink>
