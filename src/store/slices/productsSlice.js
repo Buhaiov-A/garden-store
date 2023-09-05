@@ -5,7 +5,7 @@ export const fetchProducts = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const resp = await fetch(
-        'https://garden-store-backend.onrender.com/products'
+        'https://garden-store-backend.onrender.com/products/all'
       );
       if (!resp.ok) {
         throw new Error('Server problem');
