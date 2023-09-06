@@ -69,7 +69,7 @@ const OrderForm = () => {
               name="phone"
               {...register('phone', {
                 required: true,
-                pattern: /^([+]?\d{1,3}[-\s])\d{2,4}[-\s]\d{7,10}$/,
+                pattern: /\(?\+\(?49\)?[ ()]?([- ()]?\d[- ()]?){10}/,
               })}
               placeholder="+49 999 9999999"
             />
