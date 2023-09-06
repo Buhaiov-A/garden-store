@@ -7,7 +7,7 @@ const ModalMenu = ({ active, setActive }) => {
     { id: 1, name: 'Main Page', src: '/' },
     { id: 2, name: 'Catalog', src: '/categories' },
     { id: 3, name: 'Products', src: '/products' },
-    { id: 4, name: 'Sales', src: '/sales/sales' },
+    { id: 4, name: 'Sales', src: '/sales/AllSales' },
   ];
 
   return (
