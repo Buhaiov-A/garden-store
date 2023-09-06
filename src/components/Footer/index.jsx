@@ -17,12 +17,16 @@ const Footer = () => {
             <div className={s.soc_networks}>
               <Link
                 className={s.icon}
-                to={'https://www.instagram.com/telran.de/'}
+                to={'https://www.instagram.com'}
                 target="_blank"
               >
                 <InstagramIcon sx={{ fontSize: 50, color: 'black' }} />
               </Link>
-              <Link className={s.icon} to={'/'} target="_blank">
+              <Link
+                className={s.icon}
+                to={'https://www.whatsapp.com/'}
+                target="_blank"
+              >
                 <WhatsAppIcon sx={{ fontSize: 50, color: 'black' }} />
               </Link>
             </div>
