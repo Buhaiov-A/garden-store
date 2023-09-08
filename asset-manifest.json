@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4dab118d.css",
-    "main.js": "/static/js/main.9432c922.js",
-    "static/media/img.png": "/static/media/img.e44cfa3e02a8788a4751.png",
-    "static/media/404-Page.jpg": "/static/media/404-Page.b15db41e8ff13748852d.jpg",
-    "static/media/gnome.png": "/static/media/gnome.d7aeb6a7be57f95972d3.png",
-    "static/media/logo.svg": "/static/media/logo.26c5e2555d7712985c7720286efa26e5.svg",
-    "static/media/shop-bag.svg": "/static/media/shop-bag.efdeacd450b9826f5f9e60c4bbc6a0cc.svg",
-    "static/media/basket_icon.svg": "/static/media/basket_icon.6320b6cf6aa98ff996bb1253f6f6bf78.svg",
-    "index.html": "/index.html",
-    "static/media/cross.svg": "/static/media/cross.c04b75fbc6b2a398782f3ca6525409c2.svg",
-    "main.4dab118d.css.map": "/static/css/main.4dab118d.css.map",
-    "main.9432c922.js.map": "/static/js/main.9432c922.js.map"
+    "main.css": "/garden-store/static/css/main.4dab118d.css",
+    "main.js": "/garden-store/static/js/main.fe9fbb57.js",
+    "static/media/img.png": "/garden-store/static/media/img.e44cfa3e02a8788a4751.png",
+    "static/media/404-Page.jpg": "/garden-store/static/media/404-Page.b15db41e8ff13748852d.jpg",
+    "static/media/gnome.png": "/garden-store/static/media/gnome.d7aeb6a7be57f95972d3.png",
+    "static/media/logo.svg": "/garden-store/static/media/logo.26c5e2555d7712985c7720286efa26e5.svg",
+    "static/media/shop-bag.svg": "/garden-store/static/media/shop-bag.efdeacd450b9826f5f9e60c4bbc6a0cc.svg",
+    "static/media/basket_icon.svg": "/garden-store/static/media/basket_icon.6320b6cf6aa98ff996bb1253f6f6bf78.svg",
+    "index.html": "/garden-store/index.html",
+    "static/media/cross.svg": "/garden-store/static/media/cross.c04b75fbc6b2a398782f3ca6525409c2.svg",
+    "main.4dab118d.css.map": "/garden-store/static/css/main.4dab118d.css.map",
+    "main.fe9fbb57.js.map": "/garden-store/static/js/main.fe9fbb57.js.map"
   },
   "entrypoints": [
     "static/css/main.4dab118d.css",
-    "static/js/main.9432c922.js"
+    "static/js/main.fe9fbb57.js"
   ]
 }
