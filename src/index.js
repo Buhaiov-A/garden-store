@@ -62,9 +62,6 @@ const router = createBrowserRouter(
     },
   ],
 
-  {
-    basename: '/garden-store',
-  }
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
