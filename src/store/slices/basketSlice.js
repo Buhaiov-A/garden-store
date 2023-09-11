@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import baseLink from './baseLink';
 
 const defaultState = JSON.parse(localStorage.getItem('basket')) ?? [];
 
@@ -9,16 +10,13 @@ export const fetchBasketOrder = createAsyncThunk(
   'basket/fetchBasketOrder',
   async (order, { rejectWithValue, dispatch }) => {
     try {
-      const response = await fetch(
-        'https://garden-store-backend.onrender.com/order/send',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(order),
-        }
-      );
+      const response = await fetch(`${baseLink}/order/send`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(order),
+      });
       if (!response.ok) {
         throw new Error(`An error has occured: ${response.statusText}`);
       }

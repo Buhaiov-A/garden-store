@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addToBasket } from '../../store/slices/basketSlice';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { toast } from 'react-toastify';
+import baseLink from './baseLink';
 
 const ProductItem = ({ id, title, price, discont_price, image }) => {
   const dispatch = useDispatch();
@@ -22,10 +23,7 @@ const ProductItem = ({ id, title, price, discont_price, image }) => {
   return (
     <Link className={s.product_item} to={link}>
       <div className={s.picture}>
-        <img
-          src={`https://garden-store-backend.onrender.com${image}`}
-          alt={title}
-        />
+        <img src={`${baseLink}${image}`} alt={title} />
         <button onClick={onClickAdd} className={s.add_btn}>
           Add to cart
         </button>

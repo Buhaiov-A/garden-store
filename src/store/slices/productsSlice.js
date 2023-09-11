@@ -1,12 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import baseLink from './baseLink';
 
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async (_, { rejectWithValue }) => {
     try {
-      const resp = await fetch(
-        'https://garden-store-backend.onrender.com/products/all'
-      );
+      const resp = await fetch(`${baseLink}/products/all`);
       if (!resp.ok) {
         throw new Error('Server problem');
       }

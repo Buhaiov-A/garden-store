@@ -7,6 +7,7 @@ import { fetchSingleProduct } from '../../store/slices/singleProductSlice';
 import MobilAccordion from '../../components/MobilAccordion';
 import NotFoundPage from '../NotFoundPage';
 import { toast } from 'react-toastify';
+import baseLink from './baseLink';
 
 const SingleProductPage = () => {
   const { id } = useParams();
@@ -42,11 +43,7 @@ const SingleProductPage = () => {
           <h1 className={s.product_title}>{title}</h1>
           <div className={s.product_card}>
             <div className={s.image_container}>
-              <img
-                className={s.img}
-                src={`https://garden-store-backend.onrender.com/${image}`}
-                alt={title}
-              />
+              <img className={s.img} src={`${baseLink}/${image}`} alt={title} />
             </div>
             <div className={s.product_info}>
               <div className={s.actions}>

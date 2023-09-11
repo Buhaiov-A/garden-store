@@ -3,17 +3,14 @@ import s from './style.module.css';
 import { useDispatch } from 'react-redux';
 import { decrement, increment, remove } from '../../store/slices/basketSlice';
 import cross from './cross.svg';
+import baseLink from './baseLink';
 
 const BasketItem = ({ id, title, price, discont_price, image, count }) => {
   const dispatch = useDispatch();
 
   return (
     <div className={s.product_item}>
-      <img
-        className={s.product_img}
-        src={`https://garden-store-backend.onrender.com/${image}`}
-        alt={title}
-      />
+      <img className={s.product_img} src={`${baseLink}/${image}`} alt={title} />
       <div className={s.grid_item}>
         <p className={s.product_name}>{title}</p>
         <div className={s.btns_blok}>

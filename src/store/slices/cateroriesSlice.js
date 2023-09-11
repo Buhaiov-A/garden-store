@@ -1,12 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import baseLink from './baseLink';
 
 export const fetchCategories = createAsyncThunk(
   'caterories/fetchCategories',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch(
-        'https://garden-store-backend.onrender.com/categories/all'
-      );
+      const response = await fetch(`${baseLink}/categories/all`);
       if (!response.ok) {
         throw new Error('Server problem');
       }
