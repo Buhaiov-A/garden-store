@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import s from './style.module.css';
@@ -12,6 +12,15 @@ import baseLink from './baseLink';
 const SingleProductPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+
+  const ref = useRef(null);
+  setTimeout(() => {
+    if (ref.current) {
+      ref.current.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, 100);
 
   useEffect(() => {
     dispatch(fetchSingleProduct(id));
@@ -40,7 +49,9 @@ const SingleProductPage = () => {
     <>
       {product?.item ? (
         <div className={s.product_page}>
-          <h1 className={s.product_title}>{title}</h1>
+          <h1 className={s.product_title}>
+            {title} ref={ref}
+          </h1>
           <div className={s.product_card}>
             <div className={s.image_container}>
               <img className={s.img} src={`${baseLink}/${image}`} alt={title} />
