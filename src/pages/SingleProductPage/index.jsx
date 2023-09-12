@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-// import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import s from './style.module.css';
@@ -33,7 +32,7 @@ const SingleProductPage = () => {
     ? product?.item
     : {};
 
-  const disc_percent = (100 - (discont_price * 100) / price).toFixed(1);
+  const disc_percent = Math.ceil(100 - (discont_price * 100) / price);
 
   useEffect(() => {
     document.title = `Product: ${title}`;

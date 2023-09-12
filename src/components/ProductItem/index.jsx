@@ -10,7 +10,7 @@ import { baseLink } from '../../store/slices/baseLink';
 const ProductItem = ({ id, title, price, discont_price, image }) => {
   const dispatch = useDispatch();
   const link = `/products/${id}`;
-  const disc_percent = (100 - (discont_price * 100) / price).toFixed(1);
+  const disc_percent = Math.ceil(100 - (discont_price * 100) / price);
 
   const onClickAdd = e => {
     e.preventDefault();
