@@ -25,7 +25,7 @@ const ProductsPage = () => {
     } else {
       document.title = 'Products';
     }
-  }, [location.pathname]);
+  }, [location.pathname, AllSales, categoryID, categoryTitle]);
 
   const products = useSelector(({ products: { data } }) => {
     if (AllSales) {

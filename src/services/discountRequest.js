@@ -1,4 +1,4 @@
-import baseLink from './baseLink';
+import { baseLink } from '../store/slices/baseLink';
 
 export const fetchGetDiscount = async phone => {
   try {

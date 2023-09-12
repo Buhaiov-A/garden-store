@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addToBasket } from '../../store/slices/basketSlice';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { toast } from 'react-toastify';
-import baseLink from './baseLink';
+import { baseLink } from '../../store/slices/baseLink';
 
 const ProductItem = ({ id, title, price, discont_price, image }) => {
   const dispatch = useDispatch();

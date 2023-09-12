@@ -3,7 +3,7 @@ import s from './style.module.css';
 import { useDispatch } from 'react-redux';
 import { decrement, increment, remove } from '../../store/slices/basketSlice';
 import cross from './cross.svg';
-import baseLink from './baseLink';
+import { baseLink } from '../../store/slices/baseLink';
 
 const BasketItem = ({ id, title, price, discont_price, image, count }) => {
   const dispatch = useDispatch();

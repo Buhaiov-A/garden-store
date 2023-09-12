@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import baseLink from './baseLink';
+import { baseLink } from './baseLink';
 
 export const fetchCategories = createAsyncThunk(
   'caterories/fetchCategories',

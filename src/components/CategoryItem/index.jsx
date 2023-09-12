@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './style.module.css';
 import { Link } from 'react-router-dom';
-import baseLink from './baseLink';
+import { baseLink } from '../../store/slices/baseLink';
 
 const CategoryItem = ({ id, title, image }) => {
   return (
